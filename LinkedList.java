@@ -6,7 +6,6 @@ Vinicius Gutierrez Gomes - 10425609
 public class LinkedList<T> {
     private Nodo<T> head;
 
-    // Classe interna para representar um nodo
     private static class Nodo<T> {
         T valor;
         Nodo<T> proximo;
@@ -17,7 +16,6 @@ public class LinkedList<T> {
         }
     }
 
-    // Adiciona um elemento ao final da lista
     public void adicionar(T valor) {
         if (head == null) {
             head = new Nodo<>(valor);
@@ -30,7 +28,6 @@ public class LinkedList<T> {
         }
     }
 
-    // Retorna o conteúdo da lista como String
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -42,7 +39,6 @@ public class LinkedList<T> {
         return sb.toString().trim();
     }
 
-    // Função que retorna uma lista com valores duplicados
     public LinkedList<T> duplicarValores() {
         LinkedList<T> duplicada = new LinkedList<>();
         Nodo<T> atual = head;
